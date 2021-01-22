@@ -12,10 +12,17 @@ function TodoForm({addTodo}) {
   }
   
   return (
-    <Paper>
+    <Paper style={{margin: '1rem 0', padding: '0 1rem'}}>
       <form onSubmit={handleSubmit}>
-        <h1>Todo is {todo}</h1>
-        <TextField type="text" value={todo} onChange={handleTodoChange}/>
+        <h1>Todo List</h1>
+        <TextField 
+          type="text" 
+          value={todo} 
+          onChange={handleTodoChange} 
+          margin='normal' 
+          label='Add New Todo' 
+          fullWidth
+        />
         <button type='submit'>Add Todo</button>
       </form>
       
