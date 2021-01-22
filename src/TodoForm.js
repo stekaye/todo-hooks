@@ -13,7 +13,6 @@ function TodoForm({addTodo}) {
   return (
     <Paper style={{margin: '1rem 0', padding: '0 1rem'}}>
       <form onSubmit={handleSubmit}>
-        <h1>Todo List</h1>
         <TextField 
           type="text" 
           value={todo} 
