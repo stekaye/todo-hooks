@@ -1,4 +1,3 @@
-import React, {useState, useEvent} from 'react';
 import useInputState from './hooks/useInputState';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';

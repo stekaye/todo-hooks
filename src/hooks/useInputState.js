@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export default initialValue => {
+export default function useInputState (initialValue) {
   const [value, setValue] = useState(initialValue);
   const handleChange = evt => {
     setValue(evt.target.value);
