@@ -12,10 +12,8 @@ function TodoList({todos, deleteTodo, toggleTodo, updateTodo}) {
           {todos.map((todo, index) => (
             <>
               <TodoItem 
-                task={todo.task} 
-                id={todo.id} 
+                {...todo}
                 key={todo.id} 
-                completed={todo.completed} 
                 deleteTodo={deleteTodo} 
                 toggleTodo={toggleTodo}
                 updateTodo={updateTodo}
