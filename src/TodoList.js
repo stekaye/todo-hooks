@@ -8,7 +8,7 @@ function TodoList({todos, deleteTodo, toggleTodo, updateTodo}) {
   return (
     <Paper>
       <List>
-        {todos.map(todo => (
+        {todos.map((todo, index) => (
           <>
             <TodoItem 
               task={todo.task} 
@@ -19,7 +19,7 @@ function TodoList({todos, deleteTodo, toggleTodo, updateTodo}) {
               toggleTodo={toggleTodo}
               updateTodo={updateTodo}
             />
-            <Divider/>
+            {index < todos.length - 1 && <Divider/>}
           </>
         ))}
       </List>

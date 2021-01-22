@@ -13,7 +13,7 @@ function TodoItem({task, completed, id, deleteTodo, toggleTodo, updateTodo}) {
 
   const [isEditing, toggleIsEditing] = useToggleState(false);
 
-  const listItem =  <div>
+  const listItem =  <>
                       <Checkbox tabIndex={-1} checked={completed} onClick={() => toggleTodo(id)}/>
                       <ListItemText style={{textDecoration: completed ? "line-through" : "none"}}>{task}</ListItemText>
                       <ListItemSecondaryAction>
@@ -24,10 +24,10 @@ function TodoItem({task, completed, id, deleteTodo, toggleTodo, updateTodo}) {
                           <EditIcon />
                         </IconButton>
                       </ListItemSecondaryAction>
-                    </div>
+                    </>
   
   return (
-    <ListItem>
+    <ListItem style={{height: '64px'}}>
       {isEditing ? <EditTodoForm id={id} task={task} updateTodo={updateTodo} toggleIsEditing={toggleIsEditing}/> : listItem}
     </ListItem>
   )

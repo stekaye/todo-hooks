@@ -22,7 +22,6 @@ function TodoForm({addTodo}) {
           label='Add New Todo' 
           fullWidth
         />
-        <button type='submit'>Add Todo</button>
       </form>
       
     </Paper>  
