@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 import useToggleState from './hooks/useToggleState';
 import EditTodoForm from './EditTodoForm';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import ListItemText from '@material-ui/core/ListItemText'; 
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -35,4 +35,4 @@ function TodoItem({task, completed, id}) {
   )
 }
 
-export default TodoItem;
+export default memo(TodoItem);
