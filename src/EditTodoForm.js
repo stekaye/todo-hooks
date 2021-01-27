@@ -5,11 +5,11 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import SaveIcon from '@material-ui/icons/Save';
 import BackspaceIcon from '@material-ui/icons/Backspace';
-import {TodosContext} from './contexts/todos.context';
+import { DispatchContext } from './contexts/todos.context';
 
 function EditTodoForm({id, task, toggleIsEditing}) {
 
-  const {dispatch} = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   const [editedTodo, handleChange, reset] = useInputState(task);
 
   const handleSubmit = (evt) => {
