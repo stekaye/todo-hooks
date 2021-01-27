@@ -6,10 +6,10 @@ import { TodosContext } from './contexts/todos.context';
 
 function TodoForm() {
   const [todo, handleTodoChange, resetTodo] = useInputState("");
-  const {addTodo} = useContext(TodosContext);
+  const {dispatch} = useContext(TodosContext);  
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    addTodo(todo);
+    dispatch({type: 'ADD', task: todo});
     resetTodo();
   }
   
