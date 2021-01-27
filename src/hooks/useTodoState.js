@@ -1,5 +1,5 @@
 import useLocalStorageState from './useLocalStorageState';
-import uuid from 'react-uuid'
+import uuid from 'react-uuid';
 
 function useTodoState(initialTodos) {
   const [todos, setTodos] = useLocalStorageState('todos', initialTodos);
